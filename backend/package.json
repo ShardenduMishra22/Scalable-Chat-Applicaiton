@@ -1,0 +1,21 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "A Chat application made by one can be used by millions",
+  "keywords": [
+    "ShardenduMishra22",
+    "MishraShardendu22"
+  ],
+  "license": "ISC",
+  "author": "Shardendu Mishra",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "nodemon": "^3.1.9"
+  }
+}
