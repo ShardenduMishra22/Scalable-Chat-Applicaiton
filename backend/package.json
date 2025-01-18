@@ -10,7 +10,13 @@
   "author": "Shardendu Mishra",
   "type": "module",
   "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MishraSharedendu22/Scalable-Chat-Application.git"
+  },
+  "homepage": "https://github.com/MishraSharedendu22/Scalable-Chat-Application",
   "scripts": {
+    "start": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
