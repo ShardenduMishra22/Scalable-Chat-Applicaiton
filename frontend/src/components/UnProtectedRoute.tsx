@@ -5,7 +5,6 @@ const UnProtectedRoute = ({ children }: { children: React.ReactNode }) => {
   if (user) {
     return <Navigate to="/home" />;
   }
-
   return <>{children}</>;
 };
 
