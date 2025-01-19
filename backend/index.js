@@ -1,4 +1,3 @@
-// Backend (Express.js)
 import express from "express";
 import cookieParser from "cookie-parser";
 import dotenv from "dotenv";
@@ -25,8 +24,9 @@ app.use(cookieParser());
 
 const PORT = process.env.PORT || 5000;
 
-app.use(
-    session({
+// Passport JS Authentication
+
+app.use(session({
         secret: process.env.SESSION_SECRET,
         resave: false,
         saveUninitialized: false,
@@ -61,10 +61,7 @@ app.get("/auth/google", passport.authenticate("google", {
     scope: ["profile", "email"],
 }));
 
-app.get(
-    "/auth/google/callback",
-    passport.authenticate("google", { failureRedirect: "/" }),
-    (req, res) => {
+app.get("/auth/google/callback",passport.authenticate("google", { failureRedirect: "/" }),(req, res) => {
         res.redirect(`${process.env.CLIENT_URL}`);
     }
 );
@@ -85,6 +82,14 @@ app.get("/logout", (req, res) => {
         res.json({ message: "Logout successfully" });
     });
 });
+
+// Passport JS Authentication
+
+// Routes
+
+
+
+// Routes
 
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`.yellow.bold);
