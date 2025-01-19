@@ -1,3 +1,7 @@
+import { EventEmitter } from 'events';
+const emitter = new EventEmitter();
+emitter.setMaxListeners(20);
+
 import express from "express";
 import cookieParser from "cookie-parser";
 import dotenv from "dotenv";
@@ -120,7 +124,13 @@ app.get("/logout", (req, res) => {
 
 // Routes
 
+import ChatGroupRouter from "./route/chat_group.route.js";
+import GroupRouter from "./route/chat_group.route.js";
+import ChatRouter from "./route/chat.route.js"
 
+app.use("/api",ChatGroupRouter)
+app.use("/api",GroupRouter)
+app.use("/api",ChatRouter)
 
 // Routes
 

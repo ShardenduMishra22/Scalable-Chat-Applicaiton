@@ -1,5 +1,3 @@
-import { Button } from "../ui/button";
-
 const LandingPage = () => {
   return (
     <div className="bg-gradient-to-r from-red-600 via-pink-500 to-purple-600 text-white flex flex-col items-center justify-center min-h-screen text-center">
@@ -16,9 +14,6 @@ const LandingPage = () => {
           height="200"
         />
       </div>
-      <Button>
-        Get Started
-      </Button>
     </div>
   );
 };
